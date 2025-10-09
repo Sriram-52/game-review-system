@@ -61,5 +61,11 @@ export default {
 				where: { id: args.id },
 			});
 		},
+		async updateGame(_: any, args: Record<string, any>) {
+			return await prisma.game.update({
+				where: { id: args.id },
+				data: { ...(args.game ?? {}) },
+			});
+		},
 	},
 };
