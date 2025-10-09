@@ -18,7 +18,12 @@ export default gql`
 	}
 	type Query {
 		games: [Game]
+		game(id: ID!): Game
+
 		reviews: [Review]
+		review(id: ID!): Review
+
 		authors: [Author]
+		author(id: ID!): Author
 	}
 `;
