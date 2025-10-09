@@ -50,4 +50,16 @@ export default {
 			});
 		},
 	},
+	Mutation: {
+		async addGame(_: any, args: Record<string, any>) {
+			return await prisma.game.create({
+				data: { title: args.game.title, platform: args.game.platform },
+			});
+		},
+		async deleteGame(_: any, args: Record<string, any>) {
+			return await prisma.game.delete({
+				where: { id: args.id },
+			});
+		},
+	},
 };
