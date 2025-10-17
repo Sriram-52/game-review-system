@@ -8,9 +8,14 @@
     "dev": "bun run --watch src/index.ts",
     "db:generate": "prisma generate",
     "db:push": "prisma db push",
-    "db:seed": "prisma db seed"
+    "db:seed": "prisma db seed",
+    "codegen": "graphql-codegen --config codegen.ts",
+    "generate": "bun run db:generate && bun run codegen"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^6.0.0",
+    "@graphql-codegen/typescript": "^5.0.2",
+    "@graphql-codegen/typescript-resolvers": "^5.1.0",
     "@types/bun": "latest",
     "prisma": "^6.17.0"
   },

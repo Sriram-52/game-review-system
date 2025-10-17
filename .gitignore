@@ -35,4 +35,6 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 
 # database
 db/postgres_data
-/generated/prisma
+
+# generated files (auto-generated, should not be committed)
+/generated/
